@@ -1,0 +1,23 @@
+View boards, issues on a board, issues from a backlog, reports, and versions: Required to retrieve board and backlog context and help users select work items for sprint planning.
+
+View issue details: Required to display issue keys, summaries, statuses, workflow states, assignees, and other issue details used in planning.
+
+View issues, issue estimations, and the field used for estimations: Required to read existing estimates and identify the estimation field. When the user explicitly applies a plan, the app updates issue estimates as described in the documentation.
+
+View user information in Jira: Required to retrieve users who can be assigned work in the selected projects and configure team members. The app uses relevant display names and Atlassian account identifiers; it does not collect or store users' email addresses.
+
+Read Jira project and issue data, search for issues, and access related objects such as worklogs: Required to retrieve issues through JQL, sprints, saved filters, and other supported import methods. Worklogs are retrieved only when the user selects the relevant import action. The app does not read issue comments or attachments.
+
+View JQL: Required to support issue searches using JQL queries entered by the user.
+
+View projects: Required to retrieve and display available Jira projects so users can configure their planning workspace.
+
+View sprints and sprint-related issues and properties: Required to list available sprints, associate a plan with a selected sprint, and retrieve its planning period.
+
+Read and write to app storage service: Required to persist team configuration, planning data, effort allocations, actual-hour records, and app preferences in the Atlassian Forge storage associated with the installation.
+
+Create and edit issues in Jira: Required for the user-initiated Apply Plan to Jira action, including assigning issues, updating original estimates, and creating subtasks when work is allocated to multiple team members. The app does not use this permission to post comments, create Jira worklogs, or delete issues.
+
+Update sprints, move issues to sprints, and update sprint order: Required to associate planned parent issues with the selected sprint when the user applies a plan. The app does not provide functionality to edit sprint dates or names.
+
+The app operates within the Atlassian Forge platform and uses the requesting user's Jira permissions. Write operations are initiated explicitly by the user through the Apply Plan to Jira workflow.
