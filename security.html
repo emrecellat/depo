@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Security policy for Team Organizer: Capacity & Sprint Planning.">
+  <title>Security Policy — Team Organizer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.7;
+      max-width: 850px;
+      margin: 40px auto;
+      padding: 0 20px;
+      color: #263238;
+    }
+    h1, h2 { color: #176b67; }
+    a { color: #176b67; }
+    .updated { color: #64748b; }
+  </style>
+</head>
+<body>
+  <h1>Security Policy</h1>
+  <p><strong>Team Organizer: Capacity &amp; Sprint Planning</strong></p>
+  <p class="updated">Last updated: October 29, 2026</p>
+
+  <h2>1. Purpose and Scope</h2>
+  <p>
+    This policy describes the security practices, data handling approach,
+    vulnerability reporting process, and incident response approach for
+    Team Organizer, an Atlassian Forge application for Jira Cloud.
+  </p>
+
+  <h2>2. Application Architecture and Hosting</h2>
+  <p>
+    Team Organizer runs on the Atlassian Forge platform. The application
+    uses Forge storage services for its persisted planning data. The
+    developer does not operate a separate application server or database
+    for customer data.
+  </p>
+  <p>
+    The application is designed to make Jira requests through Atlassian
+    platform services and does not make external network calls, according
+    to its current implementation and documentation. Atlassian provides
+    and manages the underlying Forge infrastructure and its platform-level
+    security controls.
+  </p>
+
+  <h2>3. Data Handling and Minimization</h2>
+  <p>
+    To provide its functionality, the app processes Jira issue keys and
+    summaries, issue statuses, assignee references, project and sprint
+    identifiers, team configuration, planning data, effort estimates,
+    actual-hour records, and relevant preferences.
+  </p>
+  <p>
+    Jira worklogs are retrieved when a user explicitly requests the
+    worklog import feature. The app does not read issue comments or
+    attachments. The app is not designed to store users' email addresses.
+  </p>
+  <p>
+    Planning data is stored using Atlassian Forge storage associated
+    with the relevant installation. The app does not sell customer data,
+    use it for advertising, or use it to train machine-learning models.
+  </p>
+
+  <h2>4. Authentication and Permissions</h2>
+  <p>
+    The app operates within Atlassian Forge and uses Atlassian's
+    authentication and authorization mechanisms. Jira requests operate
+    within the permissions available to the requesting user and the
+    permissions granted to the app.
+  </p>
+  <p>
+    The app requests permissions needed for its documented planning
+    features. Write operations are initiated by the user through the
+    Apply Plan to Jira workflow.
+  </p>
+  <p>
+    The app does not require users to provide Jira passwords, personal
+    access tokens, or other shared secrets to the developer.
+  </p>
+
+  <h2>5. Access to Shared Planning Data</h2>
+  <p>
+    Planning data is shared within an app installation. The app does
+    not currently provide separate app-level roles or per-user editing
+    permissions for shared plans. A user who can access the app page
+    may be able to view or edit the planning data.
+  </p>
+  <p>
+    Customers should manage access to the app and their Jira site
+    carefully, using their organization's access-management practices
+    and Jira permissions. Access should only be granted to people
+    authorized to view or modify the team's planning information.
+  </p>
+
+  <h2>6. Write Operations</h2>
+  <p>
+    When a user selects Apply Plan to Jira, the app previews the
+    proposed changes before they are applied. Depending on the plan,
+    these changes may include assigning issues, updating original
+    estimates, creating subtasks for work allocated to multiple people,
+    and associating planned parent issues with a sprint.
+  </p>
+  <p>
+    The app does not use this workflow to post comments, create Jira
+    worklogs, or delete issues. Users should review the proposed changes
+    before applying a plan.
+  </p>
+
+  <h2>7. Platform Security</h2>
+  <p>
+    The application relies on Atlassian Forge's platform security
+    capabilities for app execution, authentication, and storage.
+    We aim to limit data processing and permissions to what is required
+    for the app's documented functionality.
+  </p>
+  <p>
+    Atlassian manages the underlying Forge infrastructure. This policy
+    does not represent that the app has independent security
+    certifications or has undergone an independent security audit.
+  </p>
+
+  <h2>8. Vulnerability Reporting</h2>
+  <p>
+    If you believe you have identified a security vulnerability in
+    Team Organizer, please report it by email:
+    <a href="mailto:emredelice100@gmail.com">
+      emredelice100@gmail.com
+    </a>
+  </p>
+  <p>
+    Please use the subject line
+    <strong>Security Vulnerability — Team Organizer</strong>.
+    Include a description of the issue, its potential impact, and
+    reproduction steps where possible.
+  </p>
+  <p>
+    Do not include passwords, access tokens, or unnecessary customer
+    data in your report. Please avoid publicly disclosing a suspected
+    vulnerability before allowing reasonable time for investigation
+    and remediation.
+  </p>
+  <p>
+    Reports will be assessed, and confirmed issues will be investigated
+    so appropriate remediation can be considered. Response and
+    remediation times may depend on the severity and complexity of
+    the reported issue.
+  </p>
+
+  <h2>9. Security Incident Response</h2>
+  <p>
+    If we become aware of a security incident involving the application
+    or customer data under our responsibility, we will assess its scope
+    and impact, take appropriate steps to contain and remediate it,
+    and investigate the cause.
+  </p>
+  <p>
+    Where required by applicable law or contractual obligations, we
+    will notify Atlassian and affected customers through appropriate
+    channels.
+  </p>
+
+  <h2>10. Data Retention and Deletion</h2>
+  <p>
+    The app retains planning records and configuration in Forge storage
+    for as long as needed to provide its functionality. When the app
+    is uninstalled, associated Forge storage is handled according to
+    Atlassian's Forge app data lifecycle.
+  </p>
+  <p>
+    For further information about data processing and retention, please
+    consult the app's Privacy Policy.
+  </p>
+
+  <h2>11. Policy Updates</h2>
+  <p>
+    This policy may be updated when the application's functionality,
+    infrastructure, or security practices change. The revision date
+    above will be updated when a new version is published.
+  </p>
+
+  <h2>12. Contact</h2>
+  <p>
+    For security questions or vulnerability reports, contact:
+    <a href="mailto:emredelice100@gmail.com">
+      emredelice100@gmail.com
+    </a>
+  </p>
+  <p>Team Organizer — Istanbul, Türkiye</p>
+</body>
+</html>
